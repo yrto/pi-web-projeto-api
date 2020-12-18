@@ -85,6 +85,8 @@ async function get_games() {
         })))
     .catch(erro => console.log(erro))
 
+  // filtrando nulls
+
   games_encontrados = games_encontrados.map((game) => ({
     ...game,
     released: game.released ? game.released : '????',
